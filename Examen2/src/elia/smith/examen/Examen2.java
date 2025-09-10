@@ -157,7 +157,6 @@ public class Examen2 {
 	
 	public static void parte4(int numberAmount) {
 		int i = 0;
-		int numbers = 0;
 		Scanner scan = new Scanner(System.in);
 		int[] array1 = new int [numberAmount];
 		
@@ -165,40 +164,74 @@ public class Examen2 {
 			System.out.println("Choose a number for space " + (i+1));
 			int number = scan.nextInt();
 //			place = number;
+			
 			int[] array2 = new int [number];
 			for(int place2 : array2) {
 				place2 = number;
 				
 			}
-			
+			i++;
+			System.out.println();
 			
 			
 			
 		}
 	}
 	
-	
+	//PARTE6
 
 	public static void main(String[]args) {
-//		System.out.println("Choose a number");
-		Scanner scan = new Scanner(System.in);
-//		int number = scan.nextInt();
-//		parte1(number);
-//
+		int h=1;
+			System.out.println("1.Par/Impar/Negativo");
+			System.out.println("2.Estadísticos");
+			System.out.println("3.Analisis de texto");
+			System.out.println("4.Operaciones con array");
+			System.out.println("5.Comprobar Primo");
+			System.out.println("6.Salir");
+
+			
+			
+			while(h>0) {
+				Scanner scan = new Scanner(System.in);
+
+				int numberChose = scan.nextInt();
+				if(numberChose==1) {
+					System.out.println("Choose a number");
+					 scan = new Scanner(System.in);
+					int number = scan.nextInt();
+					parte1(number);
+					break;
+				}
+				if(numberChose==2) {
+					System.out.println("\nHow many numbers?");
+					scan = new Scanner(System.in);
+					int numberAmount = scan.nextInt();
+					parte2(numberAmount);
+					break;
+				}
+				if(numberChose==3) {
+					System.out.println("Write something");
+					scan = new Scanner(System.in);
+					String something = scan.nextLine();
+					parte3(something);
+					break;
+				}
+				if (numberChose==6) {
+					System.out.println("Goodbye!");
+					break;
+				}
+			}
+
+		
+		
+		
+		
 //		System.out.println("\nHow many numbers?");
 //		scan = new Scanner(System.in);
-//		int numberAmount = scan.nextInt();
-//		parte2(numberAmount);
-//		
-//		System.out.println("Write something");
-//		scan = new Scanner(System.in);
-//		String something = scan.nextLine();
-//		parte3(something);
+//		int numberAmount2 = scan.nextInt();
+//		parte4(numberAmount2);
 		
-		System.out.println("\nHow many numbers?");
-		scan = new Scanner(System.in);
-		int numberAmount2 = scan.nextInt();
-		parte4(numberAmount2);
+		
 		
 		}
 }
